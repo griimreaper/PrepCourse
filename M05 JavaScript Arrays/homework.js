@@ -182,11 +182,11 @@ function breakStatement(num) {
    var i = 0
    var resultado = []
    while (i < 10){
-      resultado[i]= num = (num + 2) ;i++
-      console.log(resultado);
       if(num===10)break;
-      return "Se interrumpió la ejecución"
-      }return resultado
+      num = num + 2 ;i++;
+      resultado.push(num);
+   }
+      return resultado
 }
 
 function continueStatement(num) {
@@ -198,9 +198,10 @@ function continueStatement(num) {
    // Tu código:
    var i = 0
    nuevoarray = []
-   while (i<10){
-      nuevoarray[i]=(num +=2);i++;
+   while (i<10){i++
       if (i==5)continue;
+      num = num +2;
+      nuevoarray.push(num)
    }return nuevoarray
 }
 
