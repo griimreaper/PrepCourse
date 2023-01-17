@@ -44,7 +44,7 @@ function invocarMetodo(objeto, metodo) {
    // Esta propiedad contiene una función en su interior. Debes invocarla/ejecutarla.
    // [NOTA]: no necesitar retornar nada.
    // Tu código:
-   objeto[metodo]
+   objeto[metodo]()
 }
 
 function multiplicarNumeroDesconocidoPorCinco(objetoMisterioso) {
@@ -147,9 +147,12 @@ function agregarMetodoCalculoDescuento(objetoProducto) {
    // PorcentajeDeDescuento ---> 0.2
    // Precio final ---> 8
    // Tu código:
+   let precioTotal= null
    objetoProducto.calcularPrecioDescuento = function () {
-      return this.precio - (this.precio * this.porcentajeDeDescuento)
-   }
+      precioTotal =this.precio*(1-this.porcentajeDeDescuento)
+      return precioTotal
+   } 
+   return objetoProducto
       
 }
 
