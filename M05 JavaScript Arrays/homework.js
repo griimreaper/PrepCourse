@@ -181,12 +181,13 @@ function breakStatement(num) {
    // Tu código:
    var i = 0
    var resultado = []
-   while (i < 10){
-      if(num===10)break;
-      num = num + 2 ;i++;
+   for (i=0 ;i < 10;i++){
+      num = num + 2 ;
       resultado.push(num);
-   }
-      return resultado
+      if(num===i)break;
+      }
+      if (i<10) return "Se interrumpió la ejecución"
+      else return resultado
 }
 
 function continueStatement(num) {
